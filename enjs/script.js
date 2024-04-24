@@ -366,8 +366,8 @@ function items() {
 
 
 window.onload = function() {
-  var itemSel = document.getElementById("Product");
-  var subitemSel = document.getElementById("Service");
+  var itemSel = document.getElementById("Products");
+  var subitemSel = document.getElementById("Services");
   for (var x in data) {
     itemSel.options[itemSel.options.length] = new Option(data[x].item, x);
   }
