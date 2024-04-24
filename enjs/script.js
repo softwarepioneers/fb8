@@ -353,6 +353,35 @@ window.onload = function() {
 
 
 
+function items() {
+  let data = [{
+    item: 'PRODUCT',
+    subitems: ['ONLINE PRODUCT', 'OFFLNE PRODUCT']
+  },
+  {
+    item: 'SERVICE',
+    subitems: ['ONLINE SERVICE', 'OFFLNE SERVICE']
+  },
+];
+
+
+window.onload = function() {
+  var itemSel = document.getElementById("Product");
+  var subitemSel = document.getElementById("Service");
+  for (var x in data) {
+    itemSel.options[itemSel.options.length] = new Option(data[x].item, x);
+  }
+  itemSel.onchange = function() {
+    //empty 
+    subitemSel.length = 1;
+    //display correct values
+    for (var y of data[this.value].subitems) {
+      subitemSel.options[subitemSel.options.length] = new Option(y, y);
+    }
+  }
+}
+}
+
 
 
 
