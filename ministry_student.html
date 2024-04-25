@@ -113,6 +113,19 @@
                             <div class="form-group col-sm-4">
                                 <input type="text" name="SchoolName" id="SchoolName" autocomplete="off" placeholder="School Name" required class="form-control custom-form-control input-lg uc-text" />
                             </div>
+                           <div class="form-group col-sm-4">
+                                <input
+                                    type="text"
+                                    name="SchoolWhatsApp"
+                                    id="SchoolWhatsApp"
+                                    autocomplete="off"
+                                    placeholder="School WhatsApp"
+                                    maxlength="15"
+                                    required
+                                    class="form-control custom-form-control input-lg uc-text"
+                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                />
+                            </div>
                             <div class="form-group col-sm-4">
                                 <input
                                     type="text"
@@ -155,12 +168,7 @@
                                 </select>
                             </div>
 
-                            <div class="form-group col-sm-4">
-                                <select name="StudentLevel" id="StudentLevel" required class="form-control custom-form-control input-lg">
-                                    <option value="" selected disabled>Student Level </option>
-                                    <option value="">SCHOOL LEVEL</option>
-                                </select>
-                            </div>
+                           
 
                           
                             
